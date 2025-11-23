@@ -7,9 +7,14 @@
 </head>
 <body>
      <!-- Reflektion uppgift 1 -->
-    <!-- 1. Jag har valt att placera script vid slutet av body. -->
-    <!-- 2. Defer betyder används när script är i slutet av head, och till för att
-     programmet ska vänta med att kompilera det till slutet så att webbsidan kan ladda upp. -->
+    <!-- 1. Jag har valt att placera script vid slutet av body, då kan HTML laddas först och skriptet körs
+            efteråt. Om script ligger i head kommer JavaScript körs innan HTML hunnit laddas klart.
+            Det kan göra att man inte kan komma åt elementen, och sidan kan kännas långsammare eftersom 
+            skriptet blockerar laddningen.-->
+    
+    <!-- 2. Defer används när script är i slutet av head, och till för att
+            programmet ska vänta med att kompilera det till slutet så att webbsidan kan ladda upp. -->
     <script src="script.js"> </script>
 </body>
+
 </html>
